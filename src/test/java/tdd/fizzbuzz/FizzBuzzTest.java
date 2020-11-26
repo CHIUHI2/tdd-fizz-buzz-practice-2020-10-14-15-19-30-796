@@ -85,4 +85,15 @@ public class FizzBuzzTest {
         //then
         assertEquals(countOffForMultipleOfFive.concat(countOffForMultipleOfSeven), countOff);
     }
+
+    @Test
+    void should_return_fizzBuzz_when_order_given_multiple_of_three_and_five_and_seven() {
+        //given
+        int order = 105;
+        //when
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        String countOff = fizzBuzz.countingOff(order);
+        //then
+        assertEquals(countOffForMultipleOfThree.concat(countOffForMultipleOfFive.concat(countOffForMultipleOfSeven)), countOff);
+    }
 }
