@@ -6,22 +6,24 @@ public class FizzBuzz {
     private static final String countOffForMultipleOfSeven = "Whizz";
 
     public String countingOff(int order) {
-        String countOff = String.valueOf(order);
+        String countOff = "";
         boolean isMultipleOfThree = this.isMultipleOfThree(order);
         boolean isMultipleOfFive = this.isMultipleOfFive(order);
         boolean isMultipleOfSeven = this.isMultipleOfSeven(order);
 
         if(isMultipleOfThree) {
-            countOff = countOffForMultipleOfThree;
-        }
-        else if(isMultipleOfFive) {
-            countOff = countOffForMultipleOfFive;
-        }
-        else if(isMultipleOfSeven) {
-            countOff = countOffForMultipleOfSeven;
+            countOff += countOffForMultipleOfThree;
         }
 
-        return countOff;
+        if(isMultipleOfFive) {
+            countOff += countOffForMultipleOfFive;
+        }
+
+        if(isMultipleOfSeven) {
+            countOff += countOffForMultipleOfSeven;
+        }
+
+        return countOff.isEmpty() ? String.valueOf(order) : countOff;
     }
 
     private boolean isMultipleOfThree(int order) {
