@@ -7,6 +7,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class FizzBuzzTest {
     private static final String countOffForMultipleOfThree = "Fizz";
     private static final String countOffForMultipleOfFive = "Buzz";
+    private static final String countOffForMultipleOfSeven = "Whizz";
 
     @Test
     void should_return_order_number_when_order_given_not_special_number() {
@@ -39,5 +40,16 @@ public class FizzBuzzTest {
         String countOff = fizzBuzz.countingOff(order);
         //then
         assertEquals(countOffForMultipleOfFive, countOff);
+    }
+
+    @Test
+    void should_return_buzz_when_order_given_multiple_of_seven() {
+        //given
+        int order = 7;
+        //when
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        String countOff = fizzBuzz.countingOff(order);
+        //then
+        assertEquals(countOffForMultipleOfSeven, countOff);
     }
 }
