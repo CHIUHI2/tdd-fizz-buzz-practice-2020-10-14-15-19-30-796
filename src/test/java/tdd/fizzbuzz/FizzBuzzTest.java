@@ -61,6 +61,6 @@ public class FizzBuzzTest {
         FizzBuzz fizzBuzz = new FizzBuzz();
         String countOff = fizzBuzz.countingOff(order);
         //then
-        assertEquals(countOffForMultipleOfFive.concat(countOffForMultipleOfFive), countOff);
+        assertEquals(countOffForMultipleOfThree.concat(countOffForMultipleOfFive), countOff);
     }
 }
