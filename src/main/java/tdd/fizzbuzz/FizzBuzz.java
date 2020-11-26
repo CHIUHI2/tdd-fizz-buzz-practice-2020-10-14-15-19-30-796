@@ -2,6 +2,8 @@ package tdd.fizzbuzz;
 
 public class FizzBuzz {
     public String countingOff(int order) {
-        return null;
+        String countOff = String.valueOf(order);
+
+        return countOff;
     }
 }
